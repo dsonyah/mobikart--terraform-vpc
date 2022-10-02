@@ -2,7 +2,7 @@
 # create frontend web server
 resource "aws_instance" "frontend-srv" {
   ami                         = "ami-08d4ac5b634553e16"
-  instance_type               = "t3.micro"
+  instance_type               = "t3.small"
   vpc_security_group_ids      = [aws_security_group.frontend-srv-sg.id]
   key_name                    = "dev2-kp"
   subnet_id                   = aws_subnet.public-SN1.id
